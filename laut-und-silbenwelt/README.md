@@ -1,20 +1,32 @@
-# Laut- und Silbenwelt – Version 2
+# Laut- und Silbenwelt – Wortdatenbank (Option A)
 
-Interaktive Lern-App für die 1. Klasse mit Anlauten und Silben, drei Schwierigkeitsgraden, Sterne-System und Browser-Sprachausgabe.
+Die App verwendet die zentrale Datei [wordbank.js](wordbank.js) mit **29 redaktionellen Wortdatensätzen**. Davon sind aktuell nur mit `reviewStatus: "core"` markierte Wörter aktiv. Die Einstufung ist eine Vorprüfung, **kein empirischer Nachweis** eindeutiger Benennbarkeit bei Erstklässlern.
 
-## Start
+Jeder Datensatz enthält: `id`, `word`, `initial` (Schreibweise: zum Beispiel `Au`, nicht zwangsläufig ein einzelner Laut), `syllables`, `image`, `audio`, `fallbackEmoji`, `reviewStatus`, `reviewNote`, `uses`, `startLevel`.
 
-Öffne `index.html` im Browser oder aktiviere GitHub Pages für das Repository (Branch `main`, `/ (root)`). Anschließend ist die App unter `https://alleng-commits.github.io/mathestars100/laut-und-silbenwelt/` erreichbar.
+## Eigene Medien ergänzen
 
-## Didaktische Hinweise
+- Bild zu »Apfel«: `media/images/apfel.svg`
+- Gesprochene Aufnahme: `media/audio/apfel.mp3`
+- Dateipfade in der Wortbank ändern, wenn die Medien anders heißen.
+- Momentan sind **keine** dieser Bild- oder Audio-Dateien enthalten: Die App zeigt automatisch ein Emoji bzw. nutzt die Browser-Sprachausgabe.
+- Für den späteren Schuleinsatz: freigestellte Illustrationen mit neutralem Hintergrund, ein Objekt pro Motiv, keine Schrift. Prüfen, ob Kinder das gleiche Wort spontan benennen.
+- Die Tonaufnahme sollte das ganze Wort mit natürlicher Aussprache enthalten. Keine künstlich verlängerten isolierten Konsonanten.
 
-- Bei Bildauswahl werden keine geschriebenen Namen angezeigt. Der Name kann über eine getrennte 🔊-Schaltfläche angehört werden.
-- Die Aufgabe **Silben lesen** ist bewusst als schriftbasierte Übung gekennzeichnet.
-- Geprüft werden bei der Buchstabenauswahl Zuordnungen von gehörten Anlauten zu Graphemen, nicht reine Phonemwahrnehmung.
-- Browser-TTS ist für isolierte Phoneme ungeeignet und kann auf verschiedenen iPads unterschiedlich klingen. Deshalb werden Wörter gesprochen, keine isolierten Anlaute.
-- Emoji-Bilder unterscheiden sich je nach Plattform und sind vor Unterrichtseinsatz auf Eindeutigkeit zu prüfen.
-- Ergebnisse werden ausschließlich im lokalen Browser gespeichert, nicht zentral erfasst.
+## Didaktische Prüffragen
 
-## Nächste Schritte
+1. Benennen mindestens einige Kinder das Bild ohne Hilfestellung mit dem vorgesehenen Wort? Alternative Bezeichnungen erfassen.
+2. Trifft der Aufgabenmodus wirklich die Kompetenz? »Buchstaben wählen« prüft zusätzlich Graphemkenntnis; »Silben lesen« zusätzlich Schriftkenntnis.
+3. Werden ähnlich klingende Anlaute oder Mehrdeutigkeiten bewusst als Schwierigkeit eingesetzt statt zufällig?
+4. Hat das Wort eine stabile Silbenzahl und ist es den Kindern bekannt?
+5. Ist die Aufnahme geräteübergreifend verständlich, gut hörbar und konsistent?
 
-Redaktionell geprüfte Illustrationen statt Emoji, eigene Sprachaufnahmen und Aufgabenprogression nach phonologischen Kompetenzen.
+**Besonderheit**: `Sonne` beginnt im Standarddeutschen mit stimmhaftem /z/. `Auto` beginnt mit dem Diphthong /aʊ/. Diese Unterschiede sind bei späterer Einführung phonologischer Kategorien zu beachten.
+
+## Veröffentlichung
+
+GitHub Pages auf `main` und `/ (root)` aktivieren. App: https://alleng-commits.github.io/mathestars100/laut-und-silbenwelt/
+
+## Offene Aufgaben
+
+Bildset und Sprachaufnahmen erstellen und rechtlich freigeben; Wörter in einer Klasse auf spontane Benennbarkeit testen; danach `reviewStatus` für geprüfte Wörter anpassen. Speicherung bleibt lokal im Browser.
